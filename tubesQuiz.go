@@ -210,7 +210,7 @@ func daftaradmin(A *arrayAdmin, na *int, Ap *arrayPeserta, np *int) {
 
 func homePeserta(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) {
   /*
-     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), jumlah admin (nadmin), dan index peserta yang sedang login
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index peserta yang sedang login
      F.S. Menampilkan menu utama peserta dan memanggil fungsi yang sesuai dengan pilihan peserta
   */
   var n int
@@ -236,7 +236,7 @@ func homePeserta(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) 
 
 func homeAdmin(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) {
   /*
-     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), jumlah admin (nadmin), dan index admin yang sedang login
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index admin yang sedang login
      F.S. Menampilkan menu utama admin dan memanggil fungsi yang sesuai dengan pilihan admin
   */
   var n int
@@ -385,7 +385,7 @@ func hapussoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 
 func start(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
   /*
-     I.S. Terdefinisi array peserta (A), jumlah peserta (np), dan index peserta yang sedang login
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index peserta yang sedang login
      F.S. Memulai kuis untuk peserta yang sedang login dan menghitung skornya berdasarkan jawaban yang benar
   */
   var prize, questionCount int
@@ -457,7 +457,7 @@ func start(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 
 func leaderboard(Ap *arrayPeserta, Ad *arrayAdmin, np int, na int, index int) {
   /*
-     I.S. Terdefinisi array peserta (A) dan jumlah peserta (np)
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index peserta yang sedang login
      F.S. Menampilkan hasil kuis (skor) dari semua peserta
   */
   var n int
