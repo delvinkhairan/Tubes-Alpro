@@ -44,9 +44,43 @@ var questions = questionsArr{
   {"Apa nama ibu kota Australia?", "Canberra", [4]string{"Sydney", "Melbourne", "Canberra", "Brisbane"}},
   {"Apa simbol kimia dari emas?", "Au", [4]string{"Ag", "Au", "Pb", "Fe"}},
   {"Siapa yang melukis Mona Lisa?", "Leonardo da Vinci", [4]string{"Vincent van Gogh", "Michelangelo", "Leonardo da Vinci", "Pablo Picasso"}},
+  {"Siapakah yang menemukan benua Amerika?", "Christopher Columbus", [4]string{"Marco Polo", "Christopher Columbus", "William Shakespeare", "Leonardo da Vinci"}},
+  {"Apa nama planet terbesar di tata surya kita?", "Jupiter", [4]string{"Saturnus", "Jupiter", "Neptunus", "Uranus"}},
+  {"Siapa yang menemukan telepon?", "Alexander Graham Bell", [4]string{"Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi"}},
+  {"Apa bahasa resmi di Brasil?", "Portugis", [4]string{"Spanyol", "Portugis", "Prancis", "Inggris"}},
+  {"Siapa yang menulis 'Hamlet' dan 'Romeo and Juliet'?", "William Shakespeare", [4]string{"Christopher Marlowe", "William Shakespeare", "Geoffrey Chaucer", "John Milton"}},
+  {"Apa nama piramida terkenal di Mesir?", "Piramida Giza", [4]string{"Piramida Cheops", "Piramida Khafre", "Piramida Menkaure", "Piramida Giza"}},
+  {"Apa nama sungai terpanjang di dunia?", "Sungai Nil", [4]string{"Sungai Amazon", "Sungai Yangtze", "Sungai Nil", "Sungai Mississippi"}},
+  {"Apa nama ilmuwan yang menemukan hukum gravitasi?", "Isaac Newton", [4]string{"Albert Einstein", "Isaac Newton", "Galileo Galilei", "Nikola Tesla"}},
+  {"Siapa yang menulis 'The Odyssey'?", "Homer", [4]string{"Virgil", "Homer", "Sophocles", "Euripides"}},
+  {"Apa nama ibu kota Kanada?", "Ottawa", [4]string{"Toronto", "Vancouver", "Ottawa", "Montreal"}},
+  {"Siapa yang menciptakan karakter James Bond?", "Ian Fleming", [4]string{"John Le Carré", "Ian Fleming", "Agatha Christie", "Arthur Conan Doyle"}},
+  {"Apa nama gas yang paling melimpah di atmosfer bumi?", "Nitrogen", [4]string{"Oksigen", "Karbon dioksida", "Nitrogen", "Hidrogen"}},
+  {"Di negara manakah terdapat Tembok Besar?", "Tiongkok", [4]string{"Jepang", "India", "Tiongkok", "Korea Selatan"}},
+  {"Lontong dapat dengan mudah ditemukan di negara?", "Semua jawaban benar", [4]string{"Malaysia", "Indonesia", "Singapura", "Semua jawaban benar"}},
+  {"Apa warna dari teh bunga telang?", "Biru", [4]string{"Merah", "Coklat", "Biru", "Kuning"}},
+  {"Apa warna dari Nasi Kerabu?", "Biru", [4]string{"Putih", "Kuning", "Biru", "Coklat"}},
+  {"Warna mata manusia yang tidak mungkin adalah?", "Hitam", [4]string{"Hitam", "Ungu", "Hijau", "Pink"}},
+  {"Letusan vulkanik terbesar dalam catatan sejarah adalah?", "Tambora", [4]string{"Krakatoa", "Vesuvius", "Tambora", "St. Helens"}},
+  {"Apakah bulan lebih besar dari planet lain?", "ya", [4]string{"Tidak", "Ya", "Semua jawaban benar", "Rahasia"}},
+  {"Berapa jumlah bulan yang dimiliki oleh bumi?", "1", [4]string{"0", "1", "2", "3"}},
+  {"Apa yang lebih berat, satu kilogram kapas atau satu kilogram besi?", "Sama berat", [4]string{"Kapas", "Besi", "Sama berat", "Tidak bisa dibandingkan"}},
+  {"Manakah yang lebih dekat ke bumi, bulan atau matahari?", "Bulan", [4]string{"Bulan", "Matahari", "Sama saja", "Tergantung waktu"}},
+  {"Di negara mana sebagian besar hutan Amazon berada?", "Brasil", [4]string{"Kolombia", "Venezuela", "Brasil", "Peru"}},
+  {"Apa warna buah jeruk sebelum matang?", "Hijau", [4]string{"Oranye", "Kuning", "Hijau", "Merah"}},
+  {"Siapa yang menulis 'Pride and Prejudice'?", "Jane Austen", [4]string{"Charlotte Bronte", "Emily Bronte", "Jane Austen", "Mary Shelley"}},
+  {"Manakah yang lebih besar, atom atau molekul?", "Molekul", [4]string{"Atom", "Molekul", "Sama besar", "Tidak bisa dibandingkan"}},
+  {"Berapa jumlah tulang dalam tubuh manusia dewasa?", "206", [4]string{"Tidak tahu", "206", "207", "208"}},
+  {"Apa yang terbentuk lebih dulu, telur atau ayam?", "Telur", [4]string{"Telur", "Ayam", "Tidak bisa dijawab", "Keduanya bersamaan"}},
+  {"Mana yang lebih dingin, Kutub Utara atau Kutub Selatan?", "Kutub Selatan", [4]string{"Kutub Utara", "Kutub Selatan", "Sama saja", "Bergantung musim"}},
+  {"Hewan apa yang dikenal bisa berubah warna untuk beradaptasi dengan lingkungannya?", "Bunglon", [4]string{"Bunglon", "Manusia", "Kupu-kupu", "Ikan badut"}},
 }
 
 func menu(Ap *arrayPeserta, Ad *arrayAdmin, npeserta, nadmin *int) {
+  /*
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), dan jumlah admin (nadmin)
+     F.S. Menampilkan menu utama untuk login atau daftar, kemudian memanggil fungsi login atau daftar sesuai pilihan pengguna
+  */
   var nmenu int
   fmt.Println("1. LOGIN")
   fmt.Println("2. DAFTAR")
@@ -59,6 +93,10 @@ func menu(Ap *arrayPeserta, Ad *arrayAdmin, npeserta, nadmin *int) {
 }
 
 func caripemain(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int) {
+  /*
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), dan jumlah admin (na)
+     F.S. Menampilkan menu login untuk peserta atau admin, dan memanggil fungsi login yang sesuai
+  */
   var nmenu int
   fmt.Println("1. LOGIN SEBAGAI PESERTA")
   fmt.Println("2. LOGIN SEBAGAI ADMIN")
@@ -71,6 +109,10 @@ func caripemain(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int) {
 }
 
 func caripeserta(A *arrayPeserta, np, na *int, Ad *arrayAdmin) {
+  /*
+     I.S. Terdefinisi array peserta (A), jumlah peserta (np), jumlah admin (na), dan array admin (Ad)
+     F.S. Melakukan proses login untuk peserta dan memanggil fungsi homePeserta jika login berhasil, atau menampilkan pesan gagal login
+  */
   var nama, pass string
   var passfound = -1
   fmt.Println("MASUKKAN NAMA ANDA")
@@ -92,6 +134,10 @@ func caripeserta(A *arrayPeserta, np, na *int, Ad *arrayAdmin) {
 }
 
 func cariadmin(A *arrayAdmin, na, np *int, Ap *arrayPeserta) {
+  /*
+     I.S. Terdefinisi array admin (A), jumlah admin (na), jumlah peserta (np), dan array peserta (Ap)
+     F.S. Melakukan proses login untuk admin dan memanggil fungsi homeAdmin jika login berhasil, atau menampilkan pesan gagal login
+  */
   var nama, pass string
   var passfound = -1
   fmt.Println("MASUKKAN NAMA ANDA")
@@ -113,6 +159,10 @@ func cariadmin(A *arrayAdmin, na, np *int, Ap *arrayPeserta) {
 }
 
 func daftar(Ap *arrayPeserta, Ad *arrayAdmin, npeserta, nadmin *int) {
+  /*
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), dan jumlah admin (nadmin)
+     F.S. Menampilkan menu pendaftaran untuk peserta atau admin, dan memanggil fungsi pendaftaran yang sesuai
+  */
   var nmenu int
   fmt.Println("1. DAFTAR SEBAGAI PESERTA")
   fmt.Println("2. DAFTAR SEBAGAI ADMIN")
@@ -125,6 +175,10 @@ func daftar(Ap *arrayPeserta, Ad *arrayAdmin, npeserta, nadmin *int) {
 }
 
 func daftarpeserta(A *arrayPeserta, np *int, Ad *arrayAdmin, na *int) {
+  /*
+     I.S. Terdefinisi array peserta (A), jumlah peserta (np), array admin (Ad), dan jumlah admin (na)
+     F.S. Mendaftarkan peserta baru dengan memasukkan nama dan password, kemudian kembali ke menu utama
+  */
   var nama, pass string
   fmt.Println("MASUKKAN NAMA BARU")
   fmt.Scan(&nama)
@@ -138,6 +192,10 @@ func daftarpeserta(A *arrayPeserta, np *int, Ad *arrayAdmin, na *int) {
 }
 
 func daftaradmin(A *arrayAdmin, na *int, Ap *arrayPeserta, np *int) {
+  /*
+     I.S. Terdefinisi array admin (A), jumlah admin (na), array peserta (Ap), dan jumlah peserta (np)
+     F.S. Mendaftarkan admin baru dengan memasukkan nama dan password, kemudian kembali ke menu utama
+  */
   var nama, pass string
   fmt.Println("MASUKKAN NAMA BARU")
   fmt.Scan(&nama)
@@ -151,6 +209,10 @@ func daftaradmin(A *arrayAdmin, na *int, Ap *arrayPeserta, np *int) {
 }
 
 func homePeserta(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) {
+  /*
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), jumlah admin (nadmin), dan index peserta yang sedang login
+     F.S. Menampilkan menu utama peserta dan memanggil fungsi yang sesuai dengan pilihan peserta
+  */
   var n int
   fmt.Println("▕▔▔╲╱▋▔▋▔▋╲╱▔▔▏")
   fmt.Println("▕┈▔╲▍┈▋┈▍┈▋╱▔┈▏")
@@ -173,6 +235,10 @@ func homePeserta(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) 
 }
 
 func homeAdmin(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) {
+  /*
+     I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (npeserta), jumlah admin (nadmin), dan index admin yang sedang login
+     F.S. Menampilkan menu utama admin dan memanggil fungsi yang sesuai dengan pilihan admin
+  */
   var n int
   fmt.Println("1. TAMPILKAN SOAL")
   fmt.Println("2. UBAH SOAL")
@@ -194,6 +260,10 @@ func homeAdmin(Ap *arrayPeserta, Ad *arrayAdmin, np *int, na *int, index int) {
 }
 
 func tampilkanPertanyaan(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
+  /*
+       I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index admin yang sedang login
+       F.S. Menampilkan semua soal yang ada, lengkap dengan jawaban dan pilihan jawaban, kemudian menunggu input untuk kembali ke menu admin
+    */
   var questionCount, n, nsoal int
   nsoal = 0
   for i := 0; questions[i].soal != ""; i++ {
@@ -219,6 +289,10 @@ func tampilkanPertanyaan(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index in
 }
 
 func ubahsoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
+  /*
+       I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index admin yang sedang login
+       F.S. Mengubah soal pada nomor yang dipilih oleh admin dengan data baru yang diinputkan, kemudian kembali ke menu admin
+    */
   var idx int
   var soal, jawaban, pilihan string
   fmt.Println("Masukkan nomor soal yang ingin diubah:")
@@ -252,6 +326,10 @@ func ubahsoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 }
 
 func tambahsoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
+  /*
+       I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index admin yang sedang login
+       F.S. Menambahkan soal baru yang diinputkan oleh admin ke dalam daftar soal, kemudian kembali ke menu admin
+    */
   var soal, jawaban, pilihan string
   var questionCount int
   for i := 0; questions[i].soal != ""; i++ {
@@ -285,6 +363,10 @@ func tambahsoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 }
 
 func hapussoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
+  /*
+       I.S. Terdefinisi array peserta (Ap), array admin (Ad), jumlah peserta (np), jumlah admin (na), dan index admin yang sedang login
+       F.S. Menghapus soal pada nomor yang dipilih oleh admin, kemudian menggeser soal-soal berikutnya ke atas, lalu kembali ke menu admin
+    */
   var idx int
   fmt.Println("Masukkan nomor soal yang ingin dihapus:")
   fmt.Scan(&idx)
@@ -302,6 +384,10 @@ func hapussoal(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 }
 
 func start(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
+  /*
+     I.S. Terdefinisi array peserta (A), jumlah peserta (np), dan index peserta yang sedang login
+     F.S. Memulai kuis untuk peserta yang sedang login dan menghitung skornya berdasarkan jawaban yang benar
+  */
   var prize, questionCount int
   var selesai bool
   rand.Seed(time.Now().UnixNano())  
@@ -370,6 +456,10 @@ func start(Ap *arrayPeserta, Ad *arrayAdmin, np, na *int, index int) {
 }
 
 func leaderboard(Ap *arrayPeserta, Ad *arrayAdmin, np int, na int, index int) {
+  /*
+     I.S. Terdefinisi array peserta (A) dan jumlah peserta (np)
+     F.S. Menampilkan hasil kuis (skor) dari semua peserta
+  */
   var n int
   if np == 0 {
     fmt.Println("Belum ada peserta yang terdaftar.")
